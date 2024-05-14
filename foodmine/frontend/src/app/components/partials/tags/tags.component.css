@@ -12,3 +12,8 @@ div{
     font-weight: 600;
     color: #f80303;
   }
+  div a:hover,div a .selected{
+    background-color:#f80303;
+    color:#f0f0f0;
+  }
+  
