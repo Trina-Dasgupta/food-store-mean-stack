@@ -20,7 +20,9 @@ app.use("/api/foods", foodRouter);
  app.use("/api/users", userRouter);
  app.use("/api/orders", orderRouter);
 
-app.use(express.static('public'));
+const angularAppPath = path.join(__dirname, '../../../dist/angular-app');
+app.use(express.static(angularAppPath));
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname,'public', 'index.html'))
 })
